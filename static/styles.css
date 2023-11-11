@@ -5,19 +5,40 @@ body {
     background-color: #f4f4f4;
 }
 
-h1 {
-    color: #333;
+header {
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 1rem 0;
 }
 
-p {
-    text-align: center;
-}
+    #pandas-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
+    .panda-card {
+        width: 20%; /* 每行四个卡片 */
+        background-color: white;
+        color: black;
+        margin: 10px;
+        padding: 15px;
+        border: 3px solid black; /* 黑色较粗边框 */
+        border-radius: 10px; /* 圆角边框 */
+        box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75); /* 阴影效果 */
+    }
 
-.table {
-    width: 100%;
-    margin-top: 20px;
-}
+    .panda-card img {
+        max-width: 100%; /* 图片自适应卡片宽度 */
+        height: auto;
+        border-radius: 5px; /* 图片圆角 */
+    }
 
+    /* 响应式布局：如果屏幕较小，减少每行的卡片数 */
+    @media (max-width: 800px) {
+        .panda-card {
+            width: 48%; /* 每行两个卡片 */
+        }
+    }
 

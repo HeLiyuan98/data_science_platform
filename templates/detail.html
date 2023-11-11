@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>熊猫详情</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png" sizes="16x16">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 70%;
+            margin: 20px auto; /* 居中并添加上下边距 */
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+            background-color: white; /* 白色背景 */
+            border-radius: 10px; /* 整个表格的圆角 */
+            overflow: hidden; /* 确保圆角在内部元素上也生效 */
+        }
+        th, td {
+            border: 1px solid #000; /* 边框颜色 */
+            text-align: left;
+            padding: 12px 15px;
+        }
+        th {
+            background-color: #000; /* 使用网站主题颜色 */
+            color: #fff;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* 条纹效果 */
+        }
+        tr:hover {
+            background-color: #ddd; /* 鼠标悬停效果 */
+        }
+        .panda-photo img {
+            max-width: 200px; /* 限制照片大小 */
+            height: auto;
+            border-radius: 5px; /* 照片圆角 */
+        }
+        .centered {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2" class="centered">熊猫详情</th>
+        </tr>
+        {% for key, value in panda.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

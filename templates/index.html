@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Project</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>熊猫图鉴</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">    
 </head>
 <body>
-    <h1>Welcome to the Data Science Project Platform</h1>
-    <p>This is a basic Flask application.</p>
-
+    <header>
+        <h1>熊猫图鉴</h1>
+        <input type="text" id="searchBox" placeholder="搜索熊猫...">
+        <button id="search-button">搜索</button>
+    </header>
+    <div id="pandas-container">
+        <!-- 大熊猫信息卡片将在这里显示 -->
+    </div>
+    <div id="pagination">
+        <button id="prev-button">上一页</button>
+        <button id="next-button">下一页</button>
+        <!-- 可以添加更多的分页逻辑，如跳转到特定页码等 -->
+    </div>
+    
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+   
+
+
 </body>
 </html>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody id="data-table-body">
-        <!-- 数据将通过JavaScript动态填充 -->
-    </tbody>
-</table>
 
 
