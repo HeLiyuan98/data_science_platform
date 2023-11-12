@@ -60,9 +60,14 @@
         {% for key, value in panda.items() %}
         <tr>
             <td>{{ key }}</td>
-            <td>{{ value }}</td>
-        </tr>
-        {% endfor %}
+        <!-- 检查是否是图片URL -->
+            {% if key == '照片' %}
+            <td><img src="{{ value }}" alt="熊猫图片" width="260" height="300"/></td> <!-- 渲染图片 -->
+            {% else %}
+            <td>{{ value }}</td> <!-- 渲染文本 -->
+            {% endif %}
+            </tr>
+            {% endfor %}
     </table>
 </body>
 </html>

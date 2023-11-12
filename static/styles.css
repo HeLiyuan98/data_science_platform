@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -42,3 +42,67 @@ header {
         }
     }
 
+    #pagination {
+        text-align: center; /* 水平居中 */
+        margin-top: 20px; /* 分页控件与内容的间距 */
+      }
+      
+      #prev-button,
+      #next-button {
+        padding: 10px 15px; /* 按钮内填充，根据需要调整 */
+        margin: 0 10px; /* 按钮之间的间距 */
+        border: 3px solid #000; /* 黑色边框 */
+        background-color: #fff; /* 背景颜色 */
+        border-radius: 10px; /* 圆角边框 */
+        color: #000; /* 文字颜色 */
+        cursor: pointer; /* 鼠标悬停时的手形指针 */
+        text-decoration: none; /* 移除下划线 */
+      }
+      
+      #prev-button:disabled,
+      #next-button:disabled {
+        color: #aaa; /* 禁用按钮的文字颜色 */
+        border-color: #aaa; /* 禁用按钮的边框颜色 */
+        cursor: not-allowed; /* 禁用按钮的鼠标指针 */
+      }
+
+      #search-container {
+        display: flex; /* 使用Flexbox布局 */
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        width: 100%;
+        max-width: 1000px; /* 或你希望的最大宽度 */
+        margin: 20px auto; /* 容器居中显示 */
+    }
+    
+    #searchBox {
+        flex-grow: 1; /* 允许输入框增长以填满额外空间 */
+        padding: 8px 15px;/* 输入框内填充，根据需要调整 */
+        margin-right: -1px; /* 使输入框和搜索按钮之间的边框重叠 */
+        width: calc(100% - 60px); /* 减去按钮宽度和一些额外空间 */
+        max-width: 250px; /* 最大宽度，根据需要调整 */
+        border: 2px solid #000; /* 黑色边框 */
+        border-radius: 15px; /* 圆角大小，根据需要调整 */
+        background-color: #fff; /* 白色背景 */
+        color: #333; /* 文字颜色，根据需要调整 */
+        font-size: 16px; /* 字体大小，根据需要调整 */
+        outline: none; /* 移除焦点时的轮廓线 */
+    }
+    
+    #searchBox:focus {
+        border-color: #555; /* 输入框聚焦时的边框颜色 */
+    }
+    
+    #search-button {
+        padding: 8px 15px; /* 按钮内填充 */
+        border: 2px solid #000; /* 黑色边框 */
+        border-radius:  15px; /* 右侧圆角 */
+        border-left: none; /* 移除左边框以避免双边框 */
+        background: url('/static/images/search_button.png') no-repeat center center; /* 熊猫头形状的图标 */
+        background-size: cover; /* 背景图片覆盖整个元素 */
+        cursor: pointer; /* 鼠标悬停时的手形指针 */
+        width: 50px; /* 按钮宽度 */
+        height: 50px; /* 按钮高度 */
+        flex-shrink: 0; /* 防止按钮在空间不足时缩小 */
+    }
+    
