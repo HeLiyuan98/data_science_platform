@@ -1,7 +1,0 @@
-DROP TABLE IF EXISTS data_items;
-
-CREATE TABLE data_items (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    description TEXT NOT NULL
-);
