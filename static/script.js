@@ -64,10 +64,11 @@ function displayPandaCards(pandas) {
         const card = document.createElement('div');
         card.className = 'panda-card';
         card.innerHTML = `
-            <a href="/panda/${panda.id}">${panda.name}</a>
+            
             <a href="/panda/${panda.id}">
-                <img src="${panda.image_url}" alt="${panda.name}" />
+            <img src="${panda.imageUrl}" alt="${panda.name}" />
             </a>
+            <a>姓名: ${panda.name}</a>
             <p>性别: ${panda.gender}</p>
             <p>年龄: ${panda.age}</p>
         `;
