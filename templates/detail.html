@@ -62,7 +62,7 @@
             <td>{{ key }}</td>
         <!-- 检查是否是图片URL -->
             {% if key == '照片' %}
-            <td><img src="{{ value }}" alt="熊猫图片" width="260" height="300"/></td> <!-- 渲染图片 -->
+            <td><img src="{{ value }}" alt="熊猫图片" width="300" height="350" style="max-width:100%; height:auto; max-height:300px; display:block; margin:auto;"/></td> <!-- 渲染图片 -->
             {% else %}
             <td>{{ value }}</td> <!-- 渲染文本 -->
             {% endif %}

@@ -56,7 +56,7 @@ def get_panda_info(panda_id=None, name=None):
     query = "SELECT * FROM pandas_info"
     conditions = []
     if panda_id:
-        conditions.append(f"id={panda_id}")
+        conditions.append(f"id={id}")
     if name:
         conditions.append(f"name LIKE '%{name}%'")
     if conditions:
