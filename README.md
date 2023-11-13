@@ -1,6 +1,3 @@
-当然，这里是一个`README.md`文件的示例，用于描述你的大熊猫元数据信息网站项目：
-
-```markdown
 # Panda Metadata Management System
 
 The Panda Metadata Management System is a web application for displaying and managing metadata information about pandas. It uses a Flask backend with a SQLite database, and a front-end built with HTML, CSS, and JavaScript.
